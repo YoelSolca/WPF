@@ -1,0 +1,50 @@
+﻿<Window x:Class="WpfAppBBDD.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppBBDD"
+        mc:Ignorable="d"
+        Title="Clientes" Height="473.031" Width="663.843">
+    <Grid Margin="0,0,-643,0" Height="439" VerticalAlignment="Top">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="151*"/>
+            <RowDefinition Height="69*"/>
+        </Grid.RowDefinitions>
+        <ListBox Name="listaClientes" Margin="57,88,972,105" SelectionChanged="ListaClientes_SelectionChanged" Grid.RowSpan="2"/>
+        <ListBox Name="pedidosCliente" Margin="386,87,688,107" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2">
+            <ListBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="1.112" AngleX="0.547"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="1.498" X="0.854"/>
+                </TransformGroup>
+            </ListBox.RenderTransform>
+        </ListBox>
+        <Button Name="BtnMoreInfo" Content="Ver más información" HorizontalAlignment="Left" Margin="445,72,0,0" VerticalAlignment="Top" Height="23" Width="136" Click="BtnMoreInfo_Click" RenderTransformOrigin="0.591,0.973" Grid.Row="1"/>
+        <Button Name="BtnAdd" Content="Agregar" HorizontalAlignment="Left" Margin="153,72,0,0" VerticalAlignment="Top" Height="22" Width="108" Click="BtnAdd_Click" Grid.Row="1" RenderTransformOrigin="0.89,-0.175"/>
+
+        <DockPanel Margin="0,-92,312,177">
+            <Menu DockPanel.Dock="Top" Height="32" Margin="0,0,334,0">
+                <MenuItem Header="Articulos" Click="MenuItem_Click">
+                    <MenuItem Header="Listado de articulos">
+                        <MenuItem.Icon>
+                            <Image  />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem Header="Pedidos" Click="MenuItem_Click_1">
+                    <MenuItem Header="Listado de pedidos">
+                        <MenuItem.Icon>
+                            <Image />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+            </Menu>
+        </DockPanel>
+        <GroupBox x:Name="groupBox_Copy" Header="Pedidos realizados" Margin="370,51,674,0" VerticalAlignment="Top" Height="303" Grid.RowSpan="2"/>
+        <GroupBox x:Name="groupBox_Copy2" Header="Clientes" Margin="26,53,943,0" VerticalAlignment="Top" Height="301" Grid.RowSpan="2"/>
+
+    </Grid>
+</Window>

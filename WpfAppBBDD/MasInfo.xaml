@@ -1,0 +1,46 @@
+﻿<Window x:Class="WpfAppBBDD.MasInfo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppBBDD"
+        mc:Ignorable="d"
+        Title="Cliente" Height="450" Width="864.5">
+    <Grid Margin="0,0,54,0">
+        <Label x:Name="label" Content="Nombre" HorizontalAlignment="Left" Margin="36,74,0,0" VerticalAlignment="Top" Height="40" Width="76"/>
+        <Label x:Name="label1" Content="Dirección" HorizontalAlignment="Left" Margin="36,128,0,0" VerticalAlignment="Top" Height="40" Width="84"/>
+        <Label x:Name="label2" Content="Población" HorizontalAlignment="Left" Margin="36,182,0,0" VerticalAlignment="Top" Height="40" Width="88"/>
+        <Label x:Name="label3" Content="Telefono" HorizontalAlignment="Left" Margin="36,242,0,0" VerticalAlignment="Top" Height="40" Width="78"/>
+        <TextBox x:Name="insertaNombreCliente" HorizontalAlignment="Left" Height="34" Margin="192,74,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="168"/>
+        <TextBox x:Name="insertaDireccionCliente" HorizontalAlignment="Left" Height="36" Margin="192,128,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="168"/>
+        <TextBox x:Name="insertaPoblacionCliente" HorizontalAlignment="Left" Height="34" Margin="192,188,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="168"/>
+        <TextBox x:Name="insertaTelefonoCliente" HorizontalAlignment="Left" Height="36" Margin="192,242,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="168"/>
+
+        <GroupBox x:Name="groupBox" Header="Información del Cliente" Margin="20,46,414,0" VerticalAlignment="Top" Height="274"/>
+        <Button x:Name="BtnUpdate" HorizontalAlignment="Left" Margin="112,362,0,0" VerticalAlignment="Top" Height="26" Width="138" Click="BtnUpdate_Click"/>
+
+        <GroupBox x:Name="groupBox_Copy" Header="Información de los pedidos" Margin="453,46,-33,0" VerticalAlignment="Top" Height="274"/>
+        <Button Name="BtnAdd" Content="Agregar un pedido" HorizontalAlignment="Left" Margin="354,362,0,0" VerticalAlignment="Top" Height="26" Width="132" Click="BtnAdd_Click"/>
+        <Button Name="BtnDelete" Content="Borrar" HorizontalAlignment="Left" Margin="626,360,0,0" VerticalAlignment="Top" Height="26" Width="104" Click="BtnDelete_Click" RenderTransformOrigin="1.186,0.343">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-5.44"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-0.383"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <ListBox Name="pedidosCliente" Margin="495,84,11,127" RenderTransformOrigin="0.5,0.5">
+            <ListBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="1.112" AngleX="0.547"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="1.498" X="0.854"/>
+                </TransformGroup>
+            </ListBox.RenderTransform>
+        </ListBox>
+
+    </Grid>
+</Window>
