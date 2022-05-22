@@ -1,0 +1,38 @@
+﻿<Window x:Class="WpfAppBBDD.ActualizarArticulo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppBBDD"
+        mc:Ignorable="d"
+        Title="Articulos" Height="464" Width="449.605">
+    <Grid HorizontalAlignment="Left" Width="440" Margin="0,0,0,-31">
+        <ListBox x:Name="todosArticulos" Margin="59,83,66,156" RenderTransformOrigin="1.398,0.492" />
+        <GroupBox x:Name="groupBox_Copy" Header="Información de los artículos" Margin="14,57,30,0" VerticalAlignment="Top" Height="296">
+            <Label Name ="FormaPago" Content="Forma de Pago" HorizontalAlignment="Left" Height="27" Margin="35,243,0,0" VerticalAlignment="Top" Width="136"/>
+
+        </GroupBox>
+        <Button x:Name="Btn" HorizontalAlignment="Left" Margin="14,380,0,0" VerticalAlignment="Top" Height="26" Width="112" Click="BtnAdd_Click"/>
+        <Menu Name="menu" Margin="0,-2,0,434">
+            <MenuItem Header="Pedidos" Click="MenuItem_Click">
+                <MenuItem Header="Listado de pedidos">
+                    <MenuItem.Icon>
+                        <Image />
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="Clientes" Click="MenuItem_Click_1">
+                <MenuItem Header="Listado de clientes">
+                    <MenuItem.Icon>
+                        <Image  />
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+
+
+        <Button x:Name="BtnExit" HorizontalAlignment="Left" Margin="293,380,0,0" VerticalAlignment="Top" Height="26" Width="117" Click="BtnExit_Click"/>
+        <Button x:Name="BtnEdit" HorizontalAlignment="Left" Margin="151,380,0,0" VerticalAlignment="Top" Height="26" Width="117" Click="BtnEdit_Click"/>
+        <TextBox Name="insertaFormaPago"  HorizontalAlignment="Left" Height="28" Margin="239,316,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="135"/>
+    </Grid>
+</Window>
